@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <meta charset="utf-8">
+    <title>DIVE INTO YOUR NEW JOB</title>
+    <meta name="description" content="Work in Progress - 2052.ml">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="play-all-model-animations.js"></script>
     <script>
       AFRAME.registerComponent('modify-materials', {
@@ -22,11 +25,18 @@
     </script>
   </head>
   <body>
+    <audio  autoplay>
+        <source src="intro.mp3" type="audio/mpeg">
+    </audio>  
+
     <a-scene background="color: #ECECEC">
       <a-assets>
         <a-asset-item id="cityModel" src="https://cdn.aframe.io/test-models/models/glTF-2.0/virtualcity/VC.gltf"></a-asset-item>
       </a-assets>
       <a-entity gltf-model="#cityModel" play-all-model-animations modify-materials></a-entity>
     </a-scene>
+    <script>
+        setTimeout(function () {window.location.href = "welcome.html"}, 46000);
+    </script>
   </body>
 </html>
