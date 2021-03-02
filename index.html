@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>DIVE INTO YOUR NEW JOB</title>
     <meta name="description" content="Work in Progress - 2052.ml">
+    <link rel="stylesheet" href="style.css">
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="play-all-model-animations.js"></script>
     <script>
@@ -16,7 +17,7 @@
             // Go over the submeshes and modify materials we want.
             obj.traverse(node => {
               if (node.name.indexOf('ship') !== -1) {
-                node.material.color.set('red');
+                node.material.color.set('darkgreen');
               }
             });
           });
@@ -25,18 +26,30 @@
     </script>
   </head>
   <body>
-    <audio  autoplay>
-        <source src="https://2052.ml/intro.mp3" type="audio/mpeg">
-    </audio>  
+      
 
-    <a-scene background="color: #ECECEC">
-      <a-assets>
-        <a-asset-item id="cityModel" src="https://cdn.aframe.io/test-models/models/glTF-2.0/virtualcity/VC.gltf"></a-asset-item>
-      </a-assets>
-      <a-entity gltf-model="#cityModel" play-all-model-animations modify-materials></a-entity>
-    </a-scene>
-    <script>
-        setTimeout(function () {window.location.href = "welcome.html"}, 46000);
-    </script>
+     <h1>
+        <button class="btn" id="b1" onclick="document.getElementById('demo').style.display='block';document.getElementById('sound').play();document.getElementById('b1').style.display='none'">DIVE INTO 2052 (Work in Progress)</button>      
+    </h1>
+
+      <div id="demo" style="display: none">
+        <audio id="sound">
+            <source src="https://2052.ml/intro.mp3" type="audio/mpeg">
+        </audio>  
+
+        <a-scene background="color: #ECECEC">
+          <a-assets>
+            <a-asset-item id="cityModel" src="https://cdn.aframe.io/test-models/models/glTF-2.0/virtualcity/VC.gltf"></a-asset-item>
+          </a-assets>
+          <a-entity gltf-model="#cityModel" play-all-model-animations modify-materials></a-entity>
+        </a-scene>
+        <script>
+            setTimeout(function () {window.location.href = "welcome.html"}, 46000);
+        </script>
+      </div>
+
+  
+      
+      
   </body>
 </html>

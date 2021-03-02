@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>2052: YOUR NEW JOB</title>
     <meta name="description" content="Explore the Future of Work">
+    <link rel="stylesheet" href="style.css">  
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-event-set-component@5/dist/aframe-event-set-component.min.js"></script>
     <script src="https://unpkg.com/aframe-layout-component@5.3.0/dist/aframe-layout-component.min.js"></script>
@@ -22,11 +23,19 @@
         sound="on: click; src: #click-sound"></a-entity>
     </script>
   </head>
+    
   <body>
-  <body>
-    <audio  autoplay>
+
+    <h1>
+        <button class="btn" id="b1" onclick="document.getElementById('demo').style.display = 'block';document.getElementById('sound').play();;document.getElementById('b1').style.display='none'">JOBS MATCHED FOR YOU (Work in Progress)</button>      
+    </h1>
+      
+   <div id="demo" style="display: none">  
+       
+    <audio id='sound'>
         <source src="https://2052.ml/matches.mp3" type="audio/mpeg">
     </audio>   
+       
     <a-scene>
       <a-assets>
         
@@ -38,14 +47,15 @@
           
         <img id="spitz-thumb" crossorigin="anonymous" src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 65 65" enable-background="new 0 0 65 65" xml:space="preserve" height="200px" width="200px"><g><rect x="0" y="0" width="65" height="65" style="fill:yellow;stroke:silver;stroke-width:1;opacity:0.9" /><text x="10" y="30" fill="black">energy<tspan class="em" dy="0.5cm" dx="-1.3cm">harvester</tspan></text></g></svg>'>
           
-        <img id="cube-thumb" crossorigin="anonymous" src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 65 65" enable-background="new 0 0 65 65" xml:space="preserve" height="200px" width="200px"><g><rect x="0" y="0" width="65" height="65" style="fill:darkred;stroke:gold;stroke-width:1;opacity:0.9" /><text x="4" y="30" fill="white">planetary<tspan class="em" dy="0.5cm" dx="-1.3cm">guard</tspan></text></g></svg>'>
+        <img id="cube-thumb" crossorigin="anonymous" src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 65 65" enable-background="new 0 0 65 65" xml:space="preserve" height="200px" width="200px"><g><rect x="0" y="0" width="65" height="65" style="fill:darkred;stroke:gold;stroke-width:1;opacity:0.9" /><text x="7" y="30" fill="white">climate<tspan class="em" dy="0.5cm" dx="-1.2cm">control</tspan></text></g></svg>'>
           
         <audio id="click-sound" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
         <img id="mount" crossorigin="anonymous" src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Helvellyn_Striding_Edge_360_Panorama%2C_Lake_District_-_June_09.jpg">
         <img id="sechelt" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
         <img id="spitz" crossorigin="anonymous" src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Spitzkoppe_360_Panorama.jpg">
 <!--        <img id="agra" crossorigin="anonymous" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/P75-wikipedia.jpg">  -->
-        <img id="cub" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/cubes.jpg">
+<!--        <img id="cube" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/cubes.jpg">-->
+        <img id="cube" crossorigin="anonymous" src="https://upload.wikimedia.org/wikipedia/commons/9/9d/2014-04-28_10-58-30_Iceland_-_M%C3%BDvatni_Reykjahl%C3%AD%C3%B0_9v_360%C2%B0.jpg">  
         <img id="balcony" crossorigin="anonymous" src="https://explor.ga/work/city.jpg">
         <img id="city" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg">
       </a-assets>
@@ -75,5 +85,6 @@
           raycaster="objects: .link"></a-cursor>
       </a-entity>
     </a-scene>
+   </div>
   </body>
 </html>
