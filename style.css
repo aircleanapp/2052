@@ -1,11 +1,10 @@
 .btn {
   background-color: darkgreen;
-  border: none;
+  border: solid 2px gold;
   color: white;
   padding: 1em 2em;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 1em;
 }
 
@@ -28,9 +27,12 @@ a {
 
 h1 {
   font-size: 2em;
-  margin: 0.67em 0; 
+  position: absolute;
   text-align: center;
-  padding: 20%;
+  display: block;
+  right: 0;
+  left: 0;
+  margin: 5em auto;
 }
 
 h2 {
